@@ -13,9 +13,9 @@ import {
 
 const { width, height } = Dimensions.get('window');
 
-const cloud1 = require('../../assets/images/cloud.png');
-const cloud2 = require('../../assets/images/sun.png');
-const cloud3 = require('../../assets/images/weather.png');
+const cloud1 = require('../assets/images/cloud.png');
+const cloud2 = require('../assets/images/sun.png');
+const cloud3 = require('../assets/images/heavyrain.png');
 
 const SplashScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
   const fadeAnim = useState(new Animated.Value(0))[0];
@@ -53,7 +53,7 @@ const SplashScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
     ).start();
 
     const timer = setTimeout(() => {
-    //   navigation.replace('Home');
+      navigation.replace('Home');
     }, 3000);
 
     return () => clearTimeout(timer);
