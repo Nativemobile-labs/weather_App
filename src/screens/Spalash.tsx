@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {
   StyleSheet,
-  Text,
   View,
   ActivityIndicator,
   Animated,
@@ -16,6 +15,8 @@ const { width, height } = Dimensions.get('window');
 const cloud1 = require('../assets/images/cloud.png');
 const cloud2 = require('../assets/images/sun.png');
 const cloud3 = require('../assets/images/heavyrain.png');
+const bakgroundImage = 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80';
+
 
 const SplashScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
   const fadeAnim = useState(new Animated.Value(0))[0];
@@ -86,7 +87,7 @@ const SplashScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
   return (
     <ImageBackground
       source={{
-        uri: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80',
+        uri: bakgroundImage,
       }}
       resizeMode="cover"
       style={styles.gradient}
